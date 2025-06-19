@@ -1,6 +1,6 @@
-# 📦 VerbConjugator
+# 📦 VerbEngine
 
-VerbConjugator is an extensible library for conjugating Spanish and English verbs — both regular and irregular — across all simple, compound, continuous, and perfect continuous tenses.
+VerbEngine is an extensible library for conjugating Spanish and English verbs — both regular and irregular — across all simple, compound, continuous, and perfect continuous tenses.
 
 Ideal for educational platforms, grammar tools, and language learning apps.
 
@@ -39,7 +39,7 @@ This library currently supports conjugation in the following tenses:
 ## 📌 Usage
 
 ```typescript
-import { conjugateSpanish, conjugateEnglish } from 'verb-conjugator';
+import { conjugateSpanish, conjugateEnglish } from 'verb-engine';
 
 const spanish = conjugateSpanish('comer');
 console.log(spanish.present.yo); // como
@@ -64,7 +64,7 @@ console.log(english.futurePerfectContinuous.we); // will have been eating
 - Web playground
 - API endpoint for cloud-based usage
 
-## 🧠 Why use VerbConjugator?
+## 🧠 Why use VerbEngine?
 
 ✅ **Lightweight** and dependency-free  
 ✅ **Easy to integrate** in Node.js or frontend projects  
@@ -74,7 +74,7 @@ console.log(english.futurePerfectContinuous.we); // will have been eating
 ## 📦 Installation
 
 ```bash
-npm install verb-conjugator
+npm i verb-engine
 ```
 
 ## 🚀 Getting Started
@@ -82,7 +82,7 @@ npm install verb-conjugator
 ### Spanish Conjugation
 
 ```typescript
-import { conjugateSpanish } from 'verb-conjugator';
+import { conjugateSpanish } from 'verb-engine';
 
 // Regular verb
 const hablar = conjugateSpanish('hablar');
@@ -98,7 +98,7 @@ console.log(ser.past.él); // fue
 ### English Conjugation
 
 ```typescript
-import { conjugateEnglish } from 'verb-conjugator';
+import { conjugateEnglish } from 'verb-engine';
 
 // Regular verb
 const walk = conjugateEnglish('walk');

@@ -73,6 +73,7 @@ export const PARTICIPIOS_IRREGULARES: Record<string, string> = {
   satisfacer: 'satisfecho',
   suscribir: 'suscrito',
   oír: 'oído',
+  reír: "reído"
 };
 
 export const GERUNDIOS_IRREGULARES: Record<string, string> = {

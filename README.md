@@ -79,36 +79,37 @@ npm i verb-engine
 
 ## 🚀 Getting Started
 
-### Spanish Conjugation
-
 ```typescript
-import { conjugateSpanish } from 'verb-engine';
+import { conjugateEnglish, getEnglishVerbs ,ConjugationResult } from "verb-engine";
 
-// Regular verb
-const hablar = conjugateSpanish('hablar');
-console.log(hablar.present.yo); // hablo
-console.log(hablar.past.tú); // hablaste
+export default function Home() {
+  const verb = "eat";
 
-// Irregular verb
-const ser = conjugateSpanish('ser');
-console.log(ser.present.yo); // soy
-console.log(ser.past.él); // fue
-```
+  const conjugation: ConjugationResult = conjugateEnglish(verb);
+  console.log(getEnglishVerbs) //all available verbs
 
-### English Conjugation
-
-```typescript
-import { conjugateEnglish } from 'verb-engine';
-
-// Regular verb
-const walk = conjugateEnglish('walk');
-console.log(walk.present.I); // walk
-console.log(walk.past.I); // walked
-
-// Irregular verb
-const go = conjugateEnglish('go');
-console.log(go.present.I); // go
-console.log(go.past.I); // went
+  return (
+    <div className="p-4">
+      <h1 className="text-xl font-bold mb-4">"{verb}" conjugation</h1>
+      {Object.entries(conjugation).map(
+        ([tense, persons]) =>
+          typeof persons === "object" &&
+          persons && (
+            <section key={tense} className="mb-4">
+              <h2 className="font-semibold capitalize">{tense}</h2>
+              <ul className="ml-4 list-disc">
+                {Object.entries(persons).map(([p, f]) => (
+                  <li key={p}>
+                    <b>{p}:</b> {f}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+      )}
+    </div>
+  );
+}
 ```
 
 ## 🔤 Pronoun References

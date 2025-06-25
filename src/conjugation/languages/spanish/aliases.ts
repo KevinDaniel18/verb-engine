@@ -3,5 +3,7 @@ export const SPANISH_VERB_ALIASES: Record<string, string> = {
   freir: 'freír',
   sonreir: 'sonreír',
   oir: 'oír',
-  irse: 'irse',
+  desleir: 'desleír',
+  refreir: 'refreír',
+  sofreir: 'sofreír',
 };

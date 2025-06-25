@@ -7,10 +7,15 @@ import {
   getBePresent,
   toGerund,
 } from './rules';
+import { VALID_ENGLISH_VERBS } from './verbs-en';
 
 const SUBJECTS = ['I', 'you', 'he/she', 'we', 'they'];
 
 export function conjugateEnglish(verb: string): ConjugationResult {
+  if (!VALID_ENGLISH_VERBS.has(verb)) {
+    throw new Error(`The verb "${verb}" is not in the list of valid verbs.`);
+  }
+
   const irregular = ENGLISH_IRREGULARS[verb];
 
   const pastParticiple = irregular?.pastParticiple ?? EN_PAST_SUFFIX(verb);
@@ -72,3 +77,5 @@ export function conjugateEnglish(verb: string): ConjugationResult {
     futurePerfectContinuous,
   };
 }
+
+export const getEnglishVerbs = Array.from(VALID_ENGLISH_VERBS);

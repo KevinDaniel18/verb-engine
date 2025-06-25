@@ -24,26 +24,6 @@ export {
 export type { ConjugationResult } from './conjugation/types/conjugation.types';
 
 async function bootstrap() {
-  // const validVerbsSet = new Set(VALID_SPANISH_VERBS);
-  // const irregularKeys = Object.keys(YO_GO_VERBS);
-
-  // const allIrregularsAreValid = irregularKeys.every((verb) =>
-  //   validVerbsSet.has(verb),
-  // );
-
-  // console.log(allIrregularsAreValid);
-
-  // const missing = irregularKeys.filter((verb) => !validVerbsSet.has(verb));
-
-  // if (missing.length > 0) {
-  //   console.log(
-  //     'Verbos de SPANISH_IRREGULARS que no están en VALID_SPANISH_VERBS:',
-  //     missing,
-  //   );
-  // } else {
-  //   console.log('Todos los SPANISH_IRREGULARS están en VALID_SPANISH_VERBS.');
-  // }
-
   const app = await NestFactory.create(AppModule);
   await app.listen(process.env.PORT ?? 3000);
 }

@@ -1,11 +1,11 @@
 {
   "name": "verb-engine",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A library to conjugate English and Spanish verbs in all tenses.",
   "author": "Kevin Sierra Castro",
   "license": "MIT",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

@@ -12,6 +12,16 @@ import {
 } from './conjugation/languages/spanish/rules';
 import { VALID_SPANISH_VERBS } from './conjugation/languages/spanish/verbs-es';
 import { VALID_ENGLISH_VERBS } from './conjugation/languages/english/verbs-en';
+export {
+  conjugateEnglish,
+  getEnglishVerbs,
+} from './conjugation/languages/english/english-conjugator';
+export {
+  conjugateSpanish,
+  getSpanishVerbs,
+} from './conjugation/languages/spanish/spanish-conjugator';
+
+export type { ConjugationResult } from './conjugation/types/conjugation.types';
 
 async function bootstrap() {
   // const validVerbsSet = new Set(VALID_SPANISH_VERBS);

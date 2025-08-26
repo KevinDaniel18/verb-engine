@@ -13,6 +13,7 @@ import {
 import { VALID_SPANISH_VERBS } from './conjugation/languages/spanish/verbs-es';
 import { VALID_ENGLISH_VERBS } from './conjugation/languages/english/verbs-en';
 import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.interface';
+import { conjugateSpanish } from './conjugation/languages/spanish/spanish-conjugator';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -23,7 +24,10 @@ async function bootstrap() {
     preflightContinue: false,
     optionsSuccessStatus: 204,
   };
+  const spanish = conjugateSpanish('comer');
+  console.log('verbo comer', spanish);
+
   app.enableCors(corsOptions);
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.PORT ?? 4000);
 }
 bootstrap();

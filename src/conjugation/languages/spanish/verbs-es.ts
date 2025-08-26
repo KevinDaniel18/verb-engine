@@ -3,6 +3,7 @@ export const VALID_SPANISH_VERBS = new Set([
   'sonar',
   'contar',
   'costar',
+  'cenar',
   'mostrar',
   'volar',
   'encontrar',

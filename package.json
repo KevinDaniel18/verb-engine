@@ -1,6 +1,6 @@
 {
   "name": "verb-engine",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A library to conjugate English and Spanish verbs in all tenses.",
   "author": "Kevin Sierra Castro",
   "license": "MIT",

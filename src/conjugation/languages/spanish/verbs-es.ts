@@ -66,6 +66,7 @@ export const VALID_SPANISH_VERBS = new Set([
   'soldar',
   'moldear',
   'cometer',
+  'comer',
   'promover',
   'conmover',
   'demoler',
